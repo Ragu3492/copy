@@ -1,5 +1,5 @@
 #!/bin/bash
-usermod -a -G root ec2-user
+#usermod -a -G root ec2-user
 sudo yum update -y
 sudo amazon-linux-extras install epel -y 
 sudo yum install git -y
