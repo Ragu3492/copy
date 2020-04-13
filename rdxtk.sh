@@ -1,7 +1,7 @@
 #!/bin/bash
 usermod -a -G root ec2-user
 sudo yum update -y
-sudo yum install epel-release -y
+sudo amazon-linux-extras install epel -y 
 sudo yum install git -y
 sudo yum install httpd -y
 sudo systemctl start httpd && sudo systemctl enable httpd
@@ -26,7 +26,7 @@ sudo cd /tmp && wget http://wordpress.org/latest.tar.gz
 sudo tar -xvzf latest.tar.gz -C /var/www/html
 
 sudo chown -R apache /var/www/html/wordpress
-cd 
+cd /home/ec2-user/
 sudo git clone https://github.com/Ragu3492/wordpress.git
 sudo cp /home/ec2-user/wordpress/wp-config.php /var/www/html/wordpress/
 
